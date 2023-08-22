@@ -1,9 +1,9 @@
 import logo from './logo.svg';
 import './App.css';
 import {BrowserRouter as Router, Routes, Route} from "react-router-dom"
-import Cart from './pages/Cart'
-import Homepage from './pages/Homepage';
-import Payment from './pages/Payment';
+import Cart from './pages/Cart1'
+import Homepage from './pages/Homepage1';
+import Payment from './pages/Payment1';
 
 
 // If you want to make another page, make sure its capitalized
