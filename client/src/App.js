@@ -1,23 +1,23 @@
 import logo from './logo.svg';
 import './App.css';
+import {BrowserRouter as Router, Routes, Route} from "react-router-dom"
+import Cart from './pages/Cart1'
+import Homepage from './pages/Homepage1';
+import Payment from './pages/Payment1';
 
+
+// If you want to make another page, make sure its capitalized
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Router>
+        <Routes>
+        <Route path ="/" element={<Homepage />} />
+        <Route path ="/cart" element={<Cart />} />
+        <Route path ="/Payment" element={<Payment />} />
+        </Routes>
+      </Router>
+  
     </div>
   );
 }
