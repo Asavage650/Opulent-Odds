@@ -1,4 +1,4 @@
-import logo from "./logo.svg";
+// import logo from "./logo.svg";
 import "./App.css";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import { ApolloClient, ApolloProvider, InMemoryCache } from "@apollo/client";
@@ -10,7 +10,9 @@ const client = new ApolloClient({
   cache: new InMemoryCache(),
 });
 
+
 // If you want to make another page, make sure its capitalized
+// clothing and shoes
 function App() {
   return (
     <ApolloProvider client={client}>
