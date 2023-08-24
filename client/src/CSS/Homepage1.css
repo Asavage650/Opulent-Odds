@@ -1,0 +1,31 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    margin: 100px;
+    align-items: center;
+
+}
+
+.login-header{
+    display: flex;
+    flex-direction: column ;
+    align-items: center;
+    gap: 10px;
+    
+    
+}
+
+.inputs {
+    margin-top: 55px;
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+
+.buttons{
+    margin-top: 45px;
+    display: flex;
+    flex-direction: row;
+    gap: 4rem;
+   
+}
