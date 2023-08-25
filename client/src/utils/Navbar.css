@@ -33,3 +33,7 @@ body {
   display: flex;
   gap: 1rem;
 }
+
+.link {
+  color: antiquewhite;
+}
