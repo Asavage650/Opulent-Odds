@@ -9,6 +9,8 @@ type User{
 type Item{
     itemId: String!
     name: String!
+    category: String!
+    seller: user
     description: String
     image: String
     price: Int!
