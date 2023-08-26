@@ -6,12 +6,17 @@ import Cart from "./pages/Cart1";
 import Homepage from "./pages/Homepage1";
 import Payment from "./pages/Payment1";
 import Categories from "./pages/Categories";
+import Clothing from "./pages/Shop/Clothing";
+import Furniture from "./pages/Shop/Furniture";
+import Porcelan from "./pages/Shop/Porcelan";
+import Trinkets from "./pages/Shop/Trinkets";
+import Vinyls from "./pages/Shop/Vinyls";
+import Art from "./pages/Shop/Art";
 
 const client = new ApolloClient({
   uri: "/graphql",
   cache: new InMemoryCache(),
 });
-
 
 // If you want to make another page, make sure its capitalized
 // clothing and shoes
@@ -26,6 +31,12 @@ function App() {
             <Route path="/cart" element={<Cart />} />
             <Route path="/Payment" element={<Payment />} />
             <Route path="/Categories" element={<Categories />} />
+            <Route path="/Clothing" element={<Clothing />} />
+            <Route path="/Furniture" element={<Furniture />} />
+            <Route path="/Porcelan" element={<Porcelan />} />
+            <Route path="/Trinkets" element={<Trinkets />} />
+            <Route path="/Vinyls" element={<Vinyls />} />
+            <Route path="/Art" element={<Art />} />
           </Routes>
         </Router>
       </div>
