@@ -1,3 +1,7 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
 .container {
     display: flex;
     flex-direction: column;
@@ -6,13 +10,13 @@
 
 }
 
-.login-header{
+.login-header {
     display: flex;
-    flex-direction: column ;
+    flex-direction: column;
     align-items: center;
     gap: 10px;
-    
-    
+
+
 }
 
 .inputs {
@@ -22,10 +26,10 @@
     gap: 25px;
 }
 
-.buttons{
+.buttons {
     margin-top: 45px;
     display: flex;
     flex-direction: row;
     gap: 4rem;
-   
+
 }
