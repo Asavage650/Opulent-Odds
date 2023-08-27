@@ -10,26 +10,33 @@ type Item{
     itemId: String!
     name: String!
     category: String!
-    seller: user
+    seller: User
     description: String
     image: String
     price: Int!
 }
+type Category{
+    name: String!
+    items: [Item]
+}
 
 type Auth{
     token: ID!
-    user: user
+    user: User
 }
 
 type Query{
-    me: User
-    cart:
+    user: User
+    users: User
+    item: Item
+    items: Item
 }
 
 type Mutation{
+    addUser(username:String, email:String, password:String): Auth
     login(email:String, password:String): Auth
     postItem(name:String, price:Int, image:String, description:String): User
-    updateItem(itemId:String, name:String, price:Int, image:String, description:String)
+    updateItem(itemId:String, name:String, price:Int, image:String, description:String): User
     deleteItem(itemId:String): User
     addToCart(itemId:String): User
     removeFromCart(itemId:String): User
