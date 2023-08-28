@@ -9,13 +9,14 @@ type User{
 type Item{
     itemId: String!
     name: String!
-    category: String!
+    category: [Category]
     seller: User
     description: String
     image: String
     price: Int!
 }
 type Category{
+    categoryId: String!
     name: String!
     items: [Item]
 }
@@ -28,6 +29,8 @@ type Auth{
 type Query{
     user: User
     users: User
+    category: Category
+    categories: Category
     item: Item
     items: Item
 }
@@ -35,6 +38,8 @@ type Query{
 type Mutation{
     addUser(username:String, email:String, password:String): Auth
     login(email:String, password:String): Auth
+    addCategory(name:String, categoryId:String): Category
+    deleteCategory(categoryId:String): Category
     postItem(name:String, price:Int, image:String, description:String): User
     updateItem(itemId:String, name:String, price:Int, image:String, description:String): User
     deleteItem(itemId:String): User
