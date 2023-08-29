@@ -1,12 +1,12 @@
 import React from "react";
-import { PRODUCTS } from "../../pages/Shop/pagelayouts/ProductPages";
+import { PRODUCTS } from "./ProductPages";
 import { Product } from "./Product";
 
-const Clothing = () => {
+const SportsMem = () => {
   return (
     <div className="shop-pages">
       <div className="page-header">
-        <h1>Clothing</h1>
+        <h1>Sports Memorobilia</h1>
       </div>
       <div className="items">
         {PRODUCTS.map((product) => (
@@ -16,4 +16,4 @@ const Clothing = () => {
     </div>
   );
 };
-export default Clothing;
+export default SportsMem;

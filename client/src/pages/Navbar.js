@@ -42,8 +42,8 @@ function Navbar() {
                   flexDirection: "column",
                 }}
               >
-                <Link className="shop-links" to="/Clothing">
-                  Clothing
+                <Link className="shop-links" to="/SportsMem">
+                  Sports Memorobilia
                 </Link>
                 <Link className="shop-links" to="/Art">
                   Art
