@@ -1,13 +1,13 @@
-import art1 from "../../assets/images/art/artPiece1.jpg";
-import art2 from "../../assets/images/art/artPiece2.jpg";
-import art3 from "../../assets/images/art/artPiece3.jpg";
-import art4 from "../../assets/images/art/artPiece4.jpg";
-import art5 from "../../assets/images/art/artPiece5.jpg";
-import art6 from "../../assets/images/art/artPiece6.jpg";
-import art7 from "../../assets/images/art/artPiece7.jpg";
-import art8 from "../../assets/images/art/artPiece8.jpg";
-import art9 from "../../assets/images/art/artPiece9.jpg";
-import art10 from "../../assets/images/art/artPiece10.jpg";
+import art1 from "../../../assets/images/art/artPiece1.jpg";
+import art2 from "../../../assets/images/art/artPiece2.jpg";
+import art3 from "../../../assets/images/art/artPiece3.jpg";
+import art4 from "../../../assets/images/art/artPiece4.jpg";
+import art5 from "../../../assets/images/art/artPiece5.jpg";
+import art6 from "../../../assets/images/art/artPiece6.jpg";
+import art7 from "../../../assets/images/art/artPiece7.jpg";
+import art8 from "../../../assets/images/art/artPiece8.jpg";
+import art9 from "../../../assets/images/art/artPiece9.jpg";
+import art10 from "../../../assets/images/art/artPiece10.jpg";
 
 export const PRODUCTS = [
   {

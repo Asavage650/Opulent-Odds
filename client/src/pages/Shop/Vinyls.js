@@ -1,5 +1,5 @@
 import React from "react";
-import { VINYLPRODUCTS } from "../../pages/Shop/VinylPages";
+import { VINYLPRODUCTS } from "../../pages/Shop/pagelayouts/VinylPages";
 import { Product } from "./Product";
 import "../../CSS/ProductsPages.css";
 
