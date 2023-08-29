@@ -1,5 +1,5 @@
 import React from "react";
-import { TRINKETPRODUCTS } from "../../pages/Shop/TrinketsPages";
+import { TRINKETPRODUCTS } from "../../pages/Shop/pagelayouts/TrinketsPages";
 import { Product } from "./Product";
 import "../../CSS/ProductsPages.css";
 

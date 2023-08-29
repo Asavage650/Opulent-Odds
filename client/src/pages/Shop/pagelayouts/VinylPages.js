@@ -1,13 +1,13 @@
-import vin1 from "../../assets/images/vinyl/CurtisMayfieldSuperFlyVinyl.jpg";
-import vin2 from "../../assets/images/vinyl/FleetwoodMacRumoursVinyl.jpg";
-import vin3 from "../../assets/images/vinyl/MarvinGayeWhatsGoingOnVinyl.jpg";
-import vin4 from "../../assets/images/vinyl/MichaelJacksonThrillerVinyl.jpg";
-import vin5 from "../../assets/images/vinyl/NirvanaInUteroVinyl.jpg";
-import vin6 from "../../assets/images/vinyl/OutkastAqueminiVinyl.jpg";
-import vin7 from "../../assets/images/vinyl/PinkFloydDarkSideOfTheMoonVinyl.jpg";
-import vin8 from "../../assets/images/vinyl/PrincePurpleRainVinyl.jpg";
-import vin9 from "../../assets/images/vinyl/REOSpeedWagonHiInfidelityVinyl.jpg";
-import vin10 from "../../assets/images/vinyl/WeatherReportHeavyWeatherVinyl.jpg";
+import vin1 from "../../../assets/images/vinyl/CurtisMayfieldSuperFlyVinyl.jpg";
+import vin2 from "../../../assets/images/vinyl/FleetwoodMacRumoursVinyl.jpg";
+import vin3 from "../../../assets/images/vinyl/MarvinGayeWhatsGoingOnVinyl.jpg";
+import vin4 from "../../../assets/images/vinyl/MichaelJacksonThrillerVinyl.jpg";
+import vin5 from "../../../assets/images/vinyl/NirvanaInUteroVinyl.jpg";
+import vin6 from "../../../assets/images/vinyl/OutkastAqueminiVinyl.jpg";
+import vin7 from "../../../assets/images/vinyl/PinkFloydDarkSideOfTheMoonVinyl.jpg";
+import vin8 from "../../../assets/images/vinyl/PrincePurpleRainVinyl.jpg";
+import vin9 from "../../../assets/images/vinyl/REOSpeedWagonHiInfidelityVinyl.jpg";
+import vin10 from "../../../assets/images/vinyl/WeatherReportHeavyWeatherVinyl.jpg";
 
 export const VINYLPRODUCTS = [
   {
