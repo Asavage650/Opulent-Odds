@@ -7,15 +7,10 @@ const categorySchema = new Schema(
       required: true,
       unique: true
     },
-    categoryId: {
-      type: String,
-      required: true,
-      unique: true
-    },
     items: [
       {
         type: Schema.Types.ObjectId,
-        ref: 'Item'
+        ref: 'Items'
       }
     ]
   }
