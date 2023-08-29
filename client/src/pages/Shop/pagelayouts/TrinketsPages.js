@@ -1,12 +1,12 @@
-import Tri1 from "../../assets/images/trinkets/CassettePlayer.jpg";
-import Tri2 from "../../assets/images/trinkets/GameboyColor.jpg";
-import Tri3 from "../../assets/images/trinkets/MiniatureGramophone.jpg";
-import Tri4 from "../../assets/images/trinkets/PocketWatch.jpg";
-import Tri5 from "../../assets/images/trinkets/VCR.jpg";
-import Tri6 from "../../assets/images/trinkets/VintageCanonCamera.jpg";
-import Tri7 from "../../assets/images/trinkets/VintageMirror.jpg";
-import Tri8 from "../../assets/images/trinkets/VintageRadio.jpg";
-import Tri9 from "../../assets/images/trinkets/VintageTelescope.jpg";
+import Tri1 from "../../../assets/images/trinkets/CassettePlayer.jpg";
+import Tri2 from "../../../assets/images/trinkets/GameboyColor.jpg";
+import Tri3 from "../../../assets/images/trinkets/MiniatureGramophone.jpg";
+import Tri4 from "../../../assets/images/trinkets/PocketWatch.jpg";
+import Tri5 from "../../../assets/images/trinkets/VCR.jpg";
+import Tri6 from "../../../assets/images/trinkets/VintageCanonCamera.jpg";
+import Tri7 from "../../../assets/images/trinkets/VintageMirror.jpg";
+import Tri8 from "../../../assets/images/trinkets/VintageRadio.jpg";
+import Tri9 from "../../../assets/images/trinkets/VintageTelescope.jpg";
 
 export const TRINKETPRODUCTS = [
   {
