@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import "../utils/Navbar.css";
+import "../CSS/Navbar.css";
 import { AiOutlineShoppingCart } from "react-icons/ai";
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
@@ -8,7 +8,7 @@ function Navbar() {
   const [showdropdown, setshowdropdown] = useState(false);
   return (
     <nav className="navbar">
-      <Link className="link" to="/">
+      <Link className="link-title" to="/">
         Oppulent Oddities
       </Link>
       <ul className="list">
@@ -23,19 +23,20 @@ function Navbar() {
           onMouseEnter={() => setshowdropdown(true)}
           onMouseLeave={() => setshowdropdown(false)}
         >
-          <button className="button">Shop</button>
+          <button className="button-shop">Shop</button>
           {showdropdown && (
             <motion.div
               initial={{ opacity: 0, height: "0px" }}
-              animate={{ opacity: 1, height: "100%" }}
+              animate={{ opacity: 1, height: "40%" }}
               transition={{ duration: 1 }}
             >
               <ul
                 className=""
                 style={{
                   position: "absolute",
-                  top: "30px",
-                  backgroundColor: "black",
+                  top: "38px",
+                  border: "2px solid #111",
+                  backgroundColor: "rgba(152, 67, 237, 0.39)",
                   width: "100%",
                   textAlign: "center",
                   display: "flex",

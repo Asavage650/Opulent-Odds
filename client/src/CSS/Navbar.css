@@ -1,13 +1,15 @@
-*{
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
+
+/* * {
   box-sizing: border-box;
-}
+} */
 
 body {
   margin: 0;
 }
 
 .navbar {
-  background-color: black;
+  background-color: rgb(255, 255, 255);
   height: 12vh;
   color: whitesmoke;
   display: flex;
@@ -18,11 +20,19 @@ body {
 
 }
 
-.list{
-  font-size: 20px;
+.link-title {
+  font-family: 'Pacifico', cursive;
+  color: rgba(152, 67, 237, 0.39);
+
+
 }
 
-.homepage{
+.link {
+  font-size: 20px;
+  color: rgba(152, 67, 237, 0.39);
+}
+
+.homepage {
   font-size: 2rem;
 }
 
@@ -32,4 +42,71 @@ body {
   list-style: none;
   display: flex;
   gap: 1rem;
+  font-family: 'Pacifico', cursive;
+
+}
+
+
+.shop-links {
+  background-color: rgba(152, 67, 237, 0.39);
+  font-size: small;
+  color: #111;
+}
+
+
+.button-shop {
+  align-items: center;
+  background-color: rgba(152, 67, 237, 0.39);
+  border: 2px solid #111;
+  border-radius: 8px;
+  box-sizing: border-box;
+  color: #111;
+  cursor: pointer;
+  display: flex;
+  font-family: 'Pacifico', cursive;
+  font-size: 16px;
+  height: 38px;
+  justify-content: center;
+  line-height: 24px;
+  max-width: 100%;
+  padding: 0 25px;
+  position: relative;
+  text-align: center;
+  text-decoration: none;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+}
+
+.button-shop:after {
+  background-color: #111;
+  border-radius: 8px;
+  content: "";
+  display: block;
+  height: 48px;
+  left: 0;
+  width: 100%;
+  position: absolute;
+  top: -2px;
+  transform: translate(8px, 8px);
+  transition: transform .2s ease-out;
+  z-index: -1;
+}
+
+.button-shop:hover:after {
+  transform: translate(0, 0);
+}
+
+.button-shop:active {
+  outline: 0;
+}
+
+.button-shop:hover {
+  outline: 0;
+}
+
+@media (min-width: 768px) {
+  .button-56 {
+    padding: 0 40px;
+  }
 }
