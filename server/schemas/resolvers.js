@@ -5,16 +5,16 @@ const { signToken } = require('../utils/auth');
 const resolvers = {
   Query: {
     user: async (_, args) => {
-      return await User.findById(args.id).populate(['items']);
+      return await User.findById(args.id).populate(['postedItems']);
     },
     users: async () => {
-      return await User.find({}).populate(['items']);
+      return await User.find({}).populate(['postedItems']);
     },
     category: async (_, args) => {
-      return await Category.findById(args.id).populate(['categories'])
+      return await Category.findById(args.id).populate(['items'])
     },
     categories: async () => {
-      return await Category.find({}).populate(['categories'])
+      return await Category.find({}).populate(['items'])
     },
     item: async (_, args) => {
       return await Items.findById(args.id);
@@ -47,18 +47,29 @@ const resolvers = {
 
       return { token, user };
     },
-    addCategory: async (_, { name, categoryId }) => {
-      return await Category.create({ name, categoryId })
+    addCategory: async (_, { name }) => {
+      return await Category.create({ name })
     },
-    postItem: async (_, { name, price, image, description }) => {
-      return await Items.create({ name, description, price, image });
-    },
-    updateItem: async (_, { _id, name, price, image, description }) => {
-      return await Items.findOneAndUpdate(
-        { _id },
-        { name, description, price, image },
-        { new: true }
+    postItem: async (_, { name, price, image, description, categoryId }, context) => {
+      const item = await Items.create({ name, description, price, image });
+      await Category.findOneAndUpdate(
+        { _id: categoryId },
+        { $push: { items: item._id } },
       )
+      await User.findOneAndUpdate(
+        { _id: context.user._id },
+        { $push: { postedItems: item._id } },
+      )
+      return "Item Created"
+    },
+    updateItem: async (_, { _id, name, price, image, description }, context) => {
+      const item = await Items.findOneAndUpdate(
+        { _id },
+        { name, description, price, image }
+      )
+
+
+      return "Item Updated"
     },
     deleteItem: async (_, { itemId }) => {
       const item = await Items.findOneAndDelete({
@@ -70,7 +81,7 @@ const resolvers = {
       const category = await Category.findOneAndDelete({
         _id: categoryId,
       });
-      return category;
+      return "Category Deleted";
     },
     addToCart: async (_, { itemId }, context) => {
       if (context.user) {

@@ -1,8 +1,12 @@
 import React from "react";
+
 import {
   MEMOROBILIAPRODUCTS,
   PRODUCTS,
 } from "../../pages/Shop/pagelayouts/Sportspages";
+
+import { PRODUCTS } from "./pagelayouts/ProductPages";
+
 import { Product } from "./Product";
 
 const SportsMem = () => {

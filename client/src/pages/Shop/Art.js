@@ -1,5 +1,4 @@
 import React from "react";
-import { Link } from "react-router-dom";
 import { PRODUCTS } from "../../pages/Shop/pagelayouts/ProductPages";
 import { Product } from "./Product";
 import "../../CSS/ProductsPages.css";

@@ -9,7 +9,7 @@ import vin8 from "../../../assets/images/vinyl/PrincePurpleRainVinyl.jpg";
 import vin9 from "../../../assets/images/vinyl/REOSpeedWagonHiInfidelityVinyl.jpg";
 import vin10 from "../../../assets/images/vinyl/WeatherReportHeavyWeatherVinyl.jpg";
 
-export const VINYLPRODUCTS = [
+export const VinylPRODUCTS = [
   {
     id: 1,
     productName: "Vinyl 1",

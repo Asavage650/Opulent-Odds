@@ -6,19 +6,20 @@ type User{
     postedItems: [Item]
     cart: [Item]
 }
-type Item{
-    itemId: String!
+type Category{
+    _id: ID 
     name: String!
-    category: [Category]
+    items: [Item]
+}
+
+type Item{
+    _id: ID
+    name: String!
+    category: Category
     seller: User
     description: String
     image: String
     price: Int!
-}
-type Category{
-    categoryId: String!
-    name: String!
-    items: [Item]
 }
 
 type Auth{
@@ -28,20 +29,20 @@ type Auth{
 
 type Query{
     user: User
-    users: User
+    users: [User]
     category: Category
-    categories: Category
+    categories: [Category]
     item: Item
-    items: Item
+    items: [Item]
 }
 
 type Mutation{
     addUser(username:String, email:String, password:String): Auth
     login(email:String, password:String): Auth
-    addCategory(name:String, categoryId:String): Category
-    deleteCategory(categoryId:String): Category
-    postItem(name:String, price:Int, image:String, description:String): User
-    updateItem(itemId:String, name:String, price:Int, image:String, description:String): User
+    addCategory(name:String): Category
+    deleteCategory(categoryId:String): String
+    postItem(name:String, price:Int, image:String, description:String, categoryId: String): String
+    updateItem(itemId:String, name:String, price:Int, image:String, description:String): String
     deleteItem(itemId:String): User
     addToCart(itemId:String): User
     removeFromCart(itemId:String): User

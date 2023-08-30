@@ -23,13 +23,13 @@ const userSchema = new Schema(
     postedItems: [
       {
         type: Schema.Types.ObjectId,
-        ref: 'Item'
+        ref: 'Items'
       }
     ],
     cart: [
       {
         type: Schema.Types.ObjectId,
-        ref: 'Item'
+        ref: 'Items'
       }
     ]
   }

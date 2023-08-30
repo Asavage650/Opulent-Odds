@@ -1,5 +1,5 @@
 import React from "react";
-import { VINYLPRODUCTS } from "../../pages/Shop/pagelayouts/VinylPages";
+import { VinylPRODUCTS } from "../../pages/Shop/pagelayouts/VinylPages";
 import { Product } from "./Product";
 import "../../CSS/ProductsPages.css";
 
@@ -10,7 +10,7 @@ const Vinyl = () => {
         <h1>Vinyl</h1>
       </div>
       <div className="items">
-        {VINYLPRODUCTS.map((product) => (
+        {VinylPRODUCTS.map((product) => (
           <Product data={product} />
         ))}
       </div>
