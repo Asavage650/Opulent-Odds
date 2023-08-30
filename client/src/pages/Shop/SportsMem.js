@@ -1,5 +1,12 @@
 import React from "react";
+
+import {
+  MEMOROBILIAPRODUCTS,
+  PRODUCTS,
+} from "../../pages/Shop/pagelayouts/Sportspages";
+
 import { PRODUCTS } from "./pagelayouts/ProductPages";
+
 import { Product } from "./Product";
 
 const SportsMem = () => {
@@ -9,7 +16,7 @@ const SportsMem = () => {
         <h1>Sports Memorobilia</h1>
       </div>
       <div className="items">
-        {PRODUCTS.map((product) => (
+        {MEMOROBILIAPRODUCTS.map((product) => (
           <Product data={product} />
         ))}
       </div>
