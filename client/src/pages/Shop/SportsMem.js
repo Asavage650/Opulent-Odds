@@ -1,5 +1,5 @@
 import React from "react";
-import { PRODUCTS } from "./ProductPages";
+import { PRODUCTS } from "./pagelayouts/ProductPages";
 import { Product } from "./Product";
 
 const SportsMem = () => {

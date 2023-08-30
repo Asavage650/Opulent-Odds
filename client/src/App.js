@@ -12,6 +12,8 @@ import Trinkets from "./pages/Shop/Trinkets";
 import Vinyls from "./pages/Shop/Vinyls";
 import Art from "./pages/Shop/Art";
 import SportsMem from "./pages/Shop/SportsMem";
+import Shopctx from "./pages/Context/Shopctx";
+// import { CartProvider } from "react-use-cart";
 
 const client = new ApolloClient({
   uri: "/graphql",
@@ -22,25 +24,31 @@ const client = new ApolloClient({
 // clothing and shoes
 function App() {
   return (
-    <ApolloProvider client={client}>
-      <div className="App">
-        <Router>
-          <Navbar />
-          <Routes>
-            <Route path="/" element={<Homepage />} />
-            <Route path="/cart" element={<Cart />} />
-            <Route path="/Payment" element={<Payment />} />
-            {/* <Route path="/Categories" element={<Categories />} /> */}
-            <Route path="/SportsMem" element={<SportsMem />} />
-            <Route path="/Furniture" element={<Furniture />} />
-            <Route path="/Porcelan" element={<Porcelan />} />
-            <Route path="/Trinkets" element={<Trinkets />} />
-            <Route path="/Vinyls" element={<Vinyls />} />
-            <Route path="/Art" element={<Art />} />
-          </Routes>
-        </Router>
-      </div>
-    </ApolloProvider>
+    <Shopctx>
+      <ApolloProvider client={client}>
+        <div className="App">
+
+          <Router>
+            {/* <CartProvider> */}
+            <Navbar />
+            <Routes>
+
+              <Route path="/" element={<Homepage />} />
+              <Route path="/cart" element={<Cart />} />
+              <Route path="/Payment" element={<Payment />} />
+              {/* <Route path="/Categories" element={<Categories />} /> */}
+              <Route path="/SportsMem" element={<SportsMem />} />
+              <Route path="/Furniture" element={<Furniture />} />
+              <Route path="/Porcelan" element={<Porcelan />} />
+              <Route path="/Trinkets" element={<Trinkets />} />
+              <Route path="/Vinyls" element={<Vinyls />} />
+              <Route path="/Art" element={<Art />} />
+            </Routes>
+            {/* </CartProvider> */}
+          </Router>
+        </div>
+      </ApolloProvider>
+    </Shopctx>
   );
 }
 

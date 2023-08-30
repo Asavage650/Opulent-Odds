@@ -1,7 +1,7 @@
 import React from "react";
 import {
   FURNITUREPRODUCTS,
-  PRODUCTS,
+
 } from "../../pages/Shop/pagelayouts/FurniturePages";
 import { Product } from "./Product";
 import "../../CSS/ProductsPages.css";
