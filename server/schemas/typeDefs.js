@@ -15,8 +15,8 @@ type Category{
 type Item{
     _id: ID
     name: String!
-    category: Category
-    seller: User
+    categoryId: String!
+    sellerId: String!
     description: String
     image: String
     price: Int!
@@ -30,9 +30,9 @@ type Auth{
 type Query{
     user: User
     users: [User]
-    category: Category
+    category(categoryId:String): Category
     categories: [Category]
-    item: Item
+    item(itemId:String): Item
     items: [Item]
 }
 
@@ -42,10 +42,11 @@ type Mutation{
     addCategory(name:String): Category
     deleteCategory(categoryId:String): String
     postItem(name:String, price:Int, image:String, description:String, categoryId: String): String
-    updateItem(itemId:String, name:String, price:Int, image:String, description:String): String
-    deleteItem(itemId:String): User
+    updateItem(itemId:String, name:String, price:Int, image:String, description:String, categoryId: String): String
+    deleteItem(itemId:String): String
     addToCart(itemId:String): User
     removeFromCart(itemId:String): User
+    clearCart: String
 }`;
 
 module.exports = typeDefs;

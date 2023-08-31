@@ -23,13 +23,13 @@ mutation login($email: String, $password: String) {
 }
 `;
 export const ADD_CATEGORY = gql`
-mutation addCategory($name: String, $categoryId: String) {
-    addCategory(name: $name, categoryId: $categoryId) {
+mutation addCategory($name: String) {
+    addCategory(name: $name) {
         category {
-            categoryId
+            _id
             name
             items {
-                itemId
+                _id
                 name
             }
         }
@@ -39,64 +39,28 @@ mutation addCategory($name: String, $categoryId: String) {
 export const REMOVE_CATEGORY = gql`
 mutation deleteCategory($categoryId: String) {
     deleteCategory(categoryId: $categoryId) {
-       category {
-        categoryId
-        name
-       } 
+        "Category Deleted"
     }
 }
 `;
 export const ADD_ITEM = gql`
-mutation postItem($name: String, $price: Int, $image: String, $description: String) {
-    postItem(name: $name, price: $price, image: $image, description: $description) {
-        user {
-            username
-            postedItems {
-                itemId
-                name
-                category
-                seller
-                description
-                image
-                price
-            }
-        }
+mutation postItem($name: String, $price: Int, $image: String, $description: String, $categoryId) {
+    postItem(name: $name, price: $price, image: $image, description: $description, categoryId: $categoryId) {
+        "Item Created"
     }
 }
 `;
 export const UPDATE_ITEM = gql`
 mutation updateItem($itemId: String, $name: String, $price: Int, $image: String, $description; String) {
     updateItem(itemId: $itemId, name: $name, price: $price, image: $image, description: $description) {
-        user {
-            username
-            postedItems {
-                itemId
-                name
-                category
-                seller
-                description
-                image
-                price
-            }
-        }
+        "Item Updated"
     }
 }
 `;
 export const REMOVE_ITEM = gql`
 mutation deleteItem($itemId: String) {
     deleteItem(itemId: $itemId) {
-        user {
-            username
-            postedItems {
-                itemId
-                name
-                category
-                seller
-                description
-                image
-                price
-            }
-        }
+        "Item Deleted"
     }
 }
 `;
@@ -107,12 +71,6 @@ mutation addToCart($itemId: String) {
             username
             cart {
                 itemId
-                name
-                category
-                seller
-                description
-                image
-                price
             }
         }
     }
@@ -125,14 +83,14 @@ mutation removeFromCart($itemId: String) {
             username
             cart {
                 itemId
-                name
-                category
-                seller
-                description
-                image
-                price
             }
         }
     }
 }
-`
+`;
+export const CLEAR_CART = gql`
+mutation clearCart {
+    clearCart {
+        "Cart Cleared
+    }
+}`

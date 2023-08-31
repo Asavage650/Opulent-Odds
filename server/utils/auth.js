@@ -1,7 +1,7 @@
 const jwt = require('jsonwebtoken');
 const { GraphQLError } = require('graphql')
 const secret = 'iliketurtles';
-const expiration = '1h';
+const expiration = '6h';
 
 module.exports = {
   AuthenticationError: new GraphQLError('Wrong email or password!', {

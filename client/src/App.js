@@ -1,6 +1,6 @@
 import "./App.css";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import { ApolloClient, ApolloProvider, InMemoryCache } from "@apollo/client";
+import { ApolloClient, ApolloProvider, InMemoryCache, createHttpLink } from "@apollo/client";
 import Navbar from "./pages/Navbar";
 import Cart from "./pages/Cart1";
 import Homepage from "./pages/Homepage1";
@@ -13,14 +13,28 @@ import Vinyls from "./pages/Shop/Vinyls";
 import Art from "./pages/Shop/Art";
 import SportsMem from "./pages/Shop/SportsMem";
 import Shopctx from "./pages/Context/Shopctx";
+import { setContext } from "@apollo/client/link/context"
 // import { CartProvider } from "react-use-cart";
 
-const client = new ApolloClient({
-  uri: "/graphql",
-  cache: new InMemoryCache(),
-});
 
-// If you want to make another page, make sure its capitalized
+const httpLink = createHttpLink({
+  uri: '/graphql',
+});
+const authLink = setContext((_, { headers }) => {
+  // get the authentication token from local storage if it exists
+  const token = localStorage.getItem('id_token');
+  // return the headers to the context so httpLink can read them
+  return {
+    headers: {
+      ...headers,
+      authorization: token ? `Bearer ${token}` : '',
+    },
+  };
+});
+const client = new ApolloClient({
+  link: authLink.concat(httpLink),
+  cache: new InMemoryCache(),
+});// If you want to make another page, make sure its capitalized
 // clothing and shoes
 function App() {
   return (

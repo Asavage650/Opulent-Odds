@@ -4,14 +4,14 @@ const { signToken } = require('../utils/auth');
 
 const resolvers = {
   Query: {
-    user: async (_, args) => {
-      return await User.findById(args.id).populate(['postedItems']);
+    user: async (_, args, context) => {
+      return await User.findById(context.user._id).populate(['postedItems']);
     },
     users: async () => {
       return await User.find({}).populate(['postedItems']);
     },
     category: async (_, args) => {
-      return await Category.findById(args.id).populate(['items'])
+      return await Category.findById(args._id).populate(['items'])
     },
     categories: async () => {
       return await Category.find({}).populate(['items'])
@@ -51,7 +51,8 @@ const resolvers = {
       return await Category.create({ name })
     },
     postItem: async (_, { name, price, image, description, categoryId }, context) => {
-      const item = await Items.create({ name, description, price, image });
+      const sellerId = context.user._id
+      const item = await Items.create({ name, description, price, image, categoryId, sellerId });
       await Category.findOneAndUpdate(
         { _id: categoryId },
         { $push: { items: item._id } },
@@ -62,23 +63,49 @@ const resolvers = {
       )
       return "Item Created"
     },
-    updateItem: async (_, { _id, name, price, image, description }, context) => {
-      const item = await Items.findOneAndUpdate(
-        { _id },
-        { name, description, price, image }
-      )
+    updateItem: async (_, { itemId, name, price, image, description, categoryId }, context) => {
+      if (context.user) {
+        const oldcategoryId = await Items.findById(itemId).populate('categoryId')
 
+        const item = await Items.findOneAndUpdate(
+          { _id: itemId },
+          { name, description, price, image, categoryId }
+        )
+        if (oldcategoryId !== categoryId) {
+          await Category.findOneAndUpdate(
+            { _id: oldcategoryId },
+            { $pull: { items: item._id } }
+          )
+          await Category.findOneAndUpdate(
+            { _id: categoryId },
+            { $push: { items: item._id } }
+          )
+        }
+        return "Item Updated"
+      }
+      throw new AuthenticationError('You need to be logged in!');
 
-      return "Item Updated"
     },
-    deleteItem: async (_, { itemId }) => {
-      const item = await Items.findOneAndDelete({
-        _id: itemId,
-      });
-      return item;
+    deleteItem: async (_, { itemId }, context) => {
+      if (context.user) {
+        const categoryId = await Items.findById(itemId).populate('categoryId')
+        await Category.findOneAndUpdate(
+          { _id: categoryId },
+          { $pull: { items: itemId } }
+        )
+        await User.findOneAndUpdate(
+          { _id: context.user._id },
+          { $pull: { postedItems: itemId } }
+        )
+        await Items.findOneAndDelete({
+          _id: itemId,
+        });
+
+        return "Item Deleted";
+      }
     },
     deleteCategory: async (_, { categoryId }) => {
-      const category = await Category.findOneAndDelete({
+      await Category.findOneAndDelete({
         _id: categoryId,
       });
       return "Category Deleted";
@@ -93,6 +120,7 @@ const resolvers = {
         );
 
       }
+
       throw new AuthenticationError('You need to be logged in!');
     },
     removeFromCart: async (_, { itemId }, context) => {
@@ -104,6 +132,17 @@ const resolvers = {
         );
       }
       throw new AuthenticationError('You need to be logged in!');
+    },
+    clearCart: async (parent, args, context) => {
+      if (context.user) {
+        await User.findOneAndUpdate(
+          { _id: context.user._id },
+          { $set: { cart: [] } },
+        );
+        return "Cart Cleared"
+      }
+      throw new AuthenticationError('You need to be logged in!');
+
     }
   }
 };
