@@ -1,70 +1,40 @@
-# Getting Started with Create React App
+# Oppulent Oddities
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+![Project License](https://img.shields.io/badge/License-MIT-red)
 
-## Available Scripts
+## Decription
 
-In the project directory, you can run:
+Welcome to Oppulent Oddities, your online destination for exploring a world of vintage wonders and intriguing oddities. Our MERN stack-powered e-commerce site is dedicated to offering a carefully curated collection of antiques and quirky trinkets that capture the essence of times gone by. Whether you're an antique aficionado, a history buff, or simply someone who appreciates the beauty of the past, Oppulent Oddities has something to captivate your imagination. Our site serves as a bridge between generations, where cherished artifacts find new homes and continue to tell their stories.
 
-### `npm start`
+## Table of Contents:
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+- [Installation](#installation)
+- [Usage](#usage)
+- [License](#license)
+- [Contributors](#contributors)
+- [Tests](#tests)
+- [Questions](#questions)
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## Installation
 
-### `npm test`
+Installing a MERN (MongoDB, Express.js, React, Node.js) stack web application involves setting up and configuring each component of the stack to work together. So the user must download and install all nesecarry packages to install this code.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Usage
 
-### `npm run build`
+An antique and oddities selling website serves as an online platform for buying and selling unique, vintage, and unusual items. It caters to individuals who are collectors, enthusiasts, or simply intrigued by items from the past that possess historical, aesthetic, or nostalgic value.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## This project is licensed under:
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+MIT
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## Contributors
 
-### `npm run eject`
+This code was written and debugged by Elenilson Hernandez, Cecil John, Alexius Savage and Robert Gomez
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+## Tests
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+The user should input node index to test code.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+## Questions
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+For any questions please contact us through github!: https://github.com/Asavage650/Opulent-Odds
