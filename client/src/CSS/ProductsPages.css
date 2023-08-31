@@ -1,4 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Yeseva+One&display=swap');
+
 
 
 .page-header {
@@ -36,6 +38,9 @@
 
 .product .description {
     text-align: center;
+    font-family: 'Yeseva One', cursive;
+    font-size: 12px;
+
 }
 
 .product:hover {

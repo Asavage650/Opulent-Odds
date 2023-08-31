@@ -1,6 +1,4 @@
-/* @tailwind base;
-@tailwind components;
-@tailwind utilities; */
+@import url('https://fonts.googleapis.com/css2?family=Yeseva+One&display=swap');
 
 .container {
     display: flex;
@@ -16,8 +14,21 @@
     align-items: center;
     gap: 10px;
     font-family: 'Pacifico', cursive;
+    font-size: 50px;
 
 
+
+
+}
+
+.section {
+    font-size: 20px;
+    font-family: 'Yeseva One', cursive;
+}
+
+.sincSection {
+    font-size: 20px;
+    font-family: 'Yeseva One', cursive;
 
 }
 

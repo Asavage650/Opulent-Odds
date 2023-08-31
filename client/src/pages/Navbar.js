@@ -15,8 +15,8 @@ function Navbar() {
         <Link className="link" to="/">
           Home
         </Link>
-        <Link className="link" to="/Payment">
-          Payment
+        <Link className="link" to="/Sell">
+          Sell
         </Link>
         <div
           style={{ position: "relative" }}
@@ -36,6 +36,7 @@ function Navbar() {
                   position: "absolute",
                   top: "38px",
                   border: "2px solid #111",
+
                   backgroundColor: "rgba(152, 67, 237, 0.39)",
                   width: "100%",
                   textAlign: "center",

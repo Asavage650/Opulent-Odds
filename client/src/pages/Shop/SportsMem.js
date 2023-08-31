@@ -1,11 +1,6 @@
 import React from "react";
 
-import {
-  MEMOROBILIAPRODUCTS,
-  PRODUCTS,
-} from "../../pages/Shop/pagelayouts/Sportspages";
-
-import { PRODUCTS } from "./pagelayouts/ProductPages";
+import { MEMOROBILIAPRODUCTS } from "../../pages/Shop/pagelayouts/Sportspages";
 
 import { Product } from "./Product";
 
