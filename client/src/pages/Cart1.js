@@ -22,12 +22,18 @@ function Cart() {
           if (cartProducts[Product.id] !== 0) {
             return <CartProduct data={Product} />
           }
+          else {
+            return <div></div>
+          }
         })}
       </div>
       <div className='cart-items'>
         {VinylPRODUCTS.map((Product) => {
           if (cartProducts[Product.id] !== 0) {
             return <CartProduct data={Product} />
+          }
+          else {
+            return <div></div>
           }
         })}
       </div>
@@ -36,12 +42,18 @@ function Cart() {
           if (cartProducts[Product.id] !== 0) {
             return <CartProduct data={Product} />
           }
+          else {
+            return <div></div>
+          }
         })}
       </div>
       <div className='cart-items'>
         {FURNITUREPRODUCTS.map((Product) => {
           if (cartProducts[Product.id] !== 0) {
             return <CartProduct data={Product} />
+          }
+          else {
+            return <div></div>
           }
         })}
       </div>

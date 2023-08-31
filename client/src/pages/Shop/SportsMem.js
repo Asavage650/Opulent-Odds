@@ -5,8 +5,6 @@ import {
   PRODUCTS,
 } from "../../pages/Shop/pagelayouts/Sportspages";
 
-import { PRODUCTS } from "./pagelayouts/ProductPages";
-
 import { Product } from "./Product";
 
 const SportsMem = () => {
@@ -16,9 +14,9 @@ const SportsMem = () => {
         <h1>Sports Memorobilia</h1>
       </div>
       <div className="items">
-        {MEMOROBILIAPRODUCTS.map((product) => (
+        {MEMOROBILIAPRODUCTS.map((product) =>
           <Product data={product} />
-        ))}
+        )}
       </div>
     </div>
   );

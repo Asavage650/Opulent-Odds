@@ -3,11 +3,12 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
+
 }
 
 
 .Cart-Product {
-    width: 700px;
+    width: 600px;
     height: 250px;
     display: flex;
 
@@ -15,11 +16,11 @@
     box-shadow: 0px 3px 15px rgba(0, 0, 0, 0.2);
     border-radius: 25px;
     margin: 30px;
+
 }
 
 .Cart-Product img {
-    width: 700px;
-    height: 250px;
+    width: 100px;
     display: flex;
 
     align-items: center;
@@ -31,4 +32,10 @@
 .Cart-Product .description {
     width: 100%;
     font-size: 30px;
+}
+
+.quanity input {
+    width: 30px;
+    text-align: center;
+    font-weight: bolder;
 }
