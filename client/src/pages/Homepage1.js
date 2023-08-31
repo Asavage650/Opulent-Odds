@@ -1,7 +1,6 @@
 import React from "react";
 import "../CSS/Homepage1.css";
 import "../CSS/slider.css";
-import { ImageSlider } from "./Slider";
 // import { AiOutlineMail } from "react-icons/ai";
 // import { RiLockPasswordFill } from "react-icons/ri";
 // import ImageSlider from "./ImageSlider";
@@ -32,7 +31,6 @@ function Homepage() {
           as we did in curating it.
         </p>
         <p className="sincSection"> Sincerely, The Oppulent Oddities Team</p>
-        <div>{ImageSlider}</div>
         {/* <div className="imageSlider">{ImageSlider}</div>
       <h4 className="login-header"> Signup w/ email and Password</h4>
       <div className="inputs">
@@ -50,6 +48,7 @@ function Homepage() {
         <button className="CAG">Continue as guest</button>
       </div> */}
       </div>
+      <footer>Any Questions? Contact us through github!</footer>
     </>
   );
 }
