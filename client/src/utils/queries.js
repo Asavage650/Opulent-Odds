@@ -1,95 +1,87 @@
 import { gql } from "@apollo/client";
 
 export const GET_USER = gql`
-{
-    user {
-        username
-        postedItems {
-            itemId
-            name
-            category {
-                categoryId
-                name
-            }
-            description
-            image
-            price
-        }
-        cart {
-            itemId
-            name
-            category {
-                categoryId
-                name
-            }
-            seller
-            description
-            image
-            price
-        }
+query user {
+    _id
+    username
+    email
+    postedItems {
+        _id
+        name
+        price
+        description
+        image
+        categoryId
+    }
+    cart {
+        _id
+        name
+        price
+        sellerId
+        description
+        image
+        categoryId
     }
 }
 `;
 export const GET_USERS = gql`
-{
-    users {
-        username
-    }
+query users {
+    _id
+    username
+    email
 }
 `;
 export const GET_CATEGORY = gql`
-{
-    category {
+query category ($_id: String){
+    category(name: $name) {
+        _id
         name
-        categoryId
         items {
-            itemId
+            _id
             name
-            seller
+            price
+            sellerId
             description
             image
-            price
         }
     }
 }
 `;
 export const GET_CATEGORIES = gql`
-{
-    categories {
+query categories {
+    _id
+    name
+    items {
+        _id
         name
-        categoryId
+        price
+        sellerId
+        description
+        price
     }
 }
 `;
 export const GET_ITEM = gql`
-{
-    item {
-        itemId
-        name
-        seller
-        description
-        image
-        price
-        category {
-            categoryId
-            name
-        }
+query item ($itemId: String) {
+    item (itemId: $itemId) {
+      _id
+      name
+      price
+      sellerId
+      categoryId
+      description
+      image  
     }
 }
 `;
 export const GET_ITEMS = gql`
-{
-    items {
-        itemId
-        name
-        seller
-        description
-        image
-        price
-        category {
-            categoryId
-            name
-        }
-    }
+query items {
+    _id
+    name
+    price
+    sellerId
+    categoryId
+    description
+    image
 }
 `;

@@ -17,6 +17,14 @@ const ItemsSchema = new Schema({
     type: Number,
     required: true,
   },
+  sellerId: {
+    type: String,
+    required: true
+  },
+  categoryId: {
+    type: String,
+    required: true
+  }
 });
 
 const Items = model("Items", ItemsSchema);
