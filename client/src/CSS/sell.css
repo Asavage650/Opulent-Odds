@@ -1,0 +1,42 @@
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
+
+.Add-Item-Form {
+    display: grid;
+    justify-content: center;
+    align-content: center;
+    text-align: center;
+    margin-top: 90px;
+    gap: 25px;
+    grid-auto-flow: row;
+}
+
+.form-boxes {
+    border: 2px solid black;
+    border-radius: 8px;
+    height: 45px;
+
+}
+
+.pointer {
+    align-items: center;
+    background-color: rgba(152, 67, 237, 0.39);
+    border: 2px solid #111;
+    border-radius: 8px;
+    box-sizing: border-box;
+    color: #111;
+    cursor: pointer;
+    display: flex;
+    font-family: 'Pacifico', cursive;
+    font-size: 16px;
+    height: 38px;
+    justify-content: center;
+    line-height: 24px;
+    max-width: 100%;
+    /* padding: 0 20px; */
+    position: relative;
+    text-align: center;
+    text-decoration: none;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+}

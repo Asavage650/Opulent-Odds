@@ -17,7 +17,7 @@ function CartProduct(props) {
                 <div className='quanity'>
                     <button onClick={() => removeFromCart(id)}> - </button>
                     <input value={cartProducts[id]} />
-                    <button onClick={() => addToCart()}> + </button>
+                    <button onClick={() => addToCart(id)}> + </button>
                 </div>
             </div>
 
