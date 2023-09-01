@@ -9,7 +9,7 @@ function Navbar() {
   return (
     <nav className="navbar">
       <Link className="link-title" to="/">
-        Oppulent Oddities
+        Opulent Oddities
       </Link>
       <ul className="list">
         <Link className="link" to="/">

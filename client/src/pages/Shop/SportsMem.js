@@ -1,6 +1,8 @@
 import React from "react";
 
-import { MEMOROBILIAPRODUCTS } from "../../pages/Shop/pagelayouts/Sportspages";
+import {
+  MEMOROBILIAPRODUCTS,
+} from "../../pages/Shop/pagelayouts/Sportspages";
 
 import { Product } from "./Product";
 
@@ -11,9 +13,9 @@ const SportsMem = () => {
         <h1>Sports Memorobilia</h1>
       </div>
       <div className="items">
-        {MEMOROBILIAPRODUCTS.map((product) => (
+        {MEMOROBILIAPRODUCTS.map((product) =>
           <Product data={product} />
-        ))}
+        )}
       </div>
     </div>
   );

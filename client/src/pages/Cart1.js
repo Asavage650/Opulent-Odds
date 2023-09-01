@@ -3,6 +3,7 @@ import { PRODUCTS } from "./Shop/pagelayouts/ProductPages";
 import { VinylPRODUCTS } from "./Shop/pagelayouts/VinylPages";
 import { TRINKETPRODUCTS } from "./Shop/pagelayouts/TrinketsPages";
 import { FURNITUREPRODUCTS } from "./Shop/pagelayouts/FurniturePages";
+import { MEMOROBILIAPRODUCTS } from "./Shop/pagelayouts/Sportspages";
 import { Shopper } from "./Context/Shopctx";
 import CartProduct from "./Context/CartProduct";
 import "../CSS/Cart.css";
@@ -19,12 +20,28 @@ function Cart() {
           if (cartProducts[Product.id] !== 0) {
             return <CartProduct data={Product} />;
           }
+          else {
+            return <div></div>
+          }
         })}
       </div>
       <div className="cart-items">
         {VinylPRODUCTS.map((Product) => {
           if (cartProducts[Product.id] !== 0) {
             return <CartProduct data={Product} />;
+          }
+          else {
+            return <div></div>
+          }
+        })}
+      </div>
+      <div className="cart-items">
+        {MEMOROBILIAPRODUCTS.map((Product) => {
+          if (cartProducts[Product.id] !== 0) {
+            return <CartProduct data={Product} />;
+          }
+          else {
+            return <div></div>
           }
         })}
       </div>
@@ -33,6 +50,9 @@ function Cart() {
           if (cartProducts[Product.id] !== 0) {
             return <CartProduct data={Product} />;
           }
+          else {
+            return <div></div>
+          }
         })}
       </div>
       <div className="cart-items">
@@ -40,8 +60,12 @@ function Cart() {
           if (cartProducts[Product.id] !== 0) {
             return <CartProduct data={Product} />;
           }
+          else {
+            return <div></div>
+          }
         })}
       </div>
+
     </div>
   );
 }

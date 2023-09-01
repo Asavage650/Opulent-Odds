@@ -18,6 +18,11 @@ import Art from "./pages/Shop/Art";
 import SportsMem from "./pages/Shop/SportsMem";
 import Shopctx from "./pages/Context/Shopctx";
 import { setContext } from "@apollo/client/link/context";
+import Footer from "./pages/Footer";
+
+// import ImageSlider from "./pages/ImageSlider";
+// import { CartProvider } from "react-use-cart";
+
 
 const httpLink = createHttpLink({
   uri: "/graphql",
@@ -54,6 +59,10 @@ function App() {
               <Route path="/Vinyls" element={<Vinyls />} />
               <Route path="/Art" element={<Art />} />
             </Routes>
+
+            {/* </CartProvider> */}
+            <Footer />
+
           </Router>
         </div>
       </ApolloProvider>

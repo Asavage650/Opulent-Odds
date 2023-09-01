@@ -11,15 +11,14 @@ import art10 from "../../../assets/images/art/artPiece10.jpg";
 
 export const PRODUCTS = [
   {
-    id: 1,
-    productName: "Oil painting of a small marsh",
-    description:
-      "This piece was painted in the early 1800's with ornate detailed frame",
+    id: 21,
+    productName: "Art Piece 1",
+    description: "Pretty piece 1",
     productImage: art1,
     price: 1000,
   },
   {
-    id: 2,
+    id: 22,
     productName: "Art Piece 2",
     description:
       "This piece was painted in the early 1900's with ornate detailed frame",
@@ -27,7 +26,7 @@ export const PRODUCTS = [
     price: 1000,
   },
   {
-    id: 3,
+    id: 23,
     productName: "Art Piece 3",
     description:
       "This piece was painted in the early days with an ornate detailed frame",
@@ -35,7 +34,7 @@ export const PRODUCTS = [
     price: 1000,
   },
   {
-    id: 4,
+    id: 24,
     productName: "Art Piece 4",
     description:
       "This piece was painted in the early days with an ornate detailed frame",
@@ -43,7 +42,7 @@ export const PRODUCTS = [
     price: 1000,
   },
   {
-    id: 5,
+    id: 25,
     productName: "Art Piece 5",
     description:
       "This piece was painted in the early days with an ornate detailed frame",
@@ -51,7 +50,7 @@ export const PRODUCTS = [
     price: 1000,
   },
   {
-    id: 6,
+    id: 26,
     productName: "Art Piece 6",
     description:
       "This piece was painted in the early days with an ornate detailed frame",
@@ -59,7 +58,7 @@ export const PRODUCTS = [
     price: 1000,
   },
   {
-    id: 7,
+    id: 27,
     productName: "Art Piece 7",
     description:
       "This piece was painted in the early days with an ornate detailed frame",
@@ -67,7 +66,7 @@ export const PRODUCTS = [
     price: 1000,
   },
   {
-    id: 8,
+    id: 28,
     productName: "Art Piece 8",
     description:
       "This piece was embriodered in the early days with exrteme care and beautifully detailed work",
@@ -75,7 +74,7 @@ export const PRODUCTS = [
     price: 1000,
   },
   {
-    id: 9,
+    id: 29,
     productName: "Art Piece 9",
     description:
       "This piece was painted in the early days with an ornate detailed frame",
@@ -83,7 +82,7 @@ export const PRODUCTS = [
     price: 1000,
   },
   {
-    id: 10,
+    id: 30,
     productName: "Art Piece 10",
     description: "This mirror was made in 1609 with an ornate detailed frame",
     productImage: art10,

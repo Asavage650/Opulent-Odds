@@ -4,7 +4,7 @@ import { Shopper } from '../Context/Shopctx'
 
 export const Product = (props) => {
   const { id, productName, description, productImage, price } = props.data;
-  const { addToCart, cartProducts } = useContext(Shopper);
+  const { addToCart, cartProducts, } = useContext(Shopper);
   const cartProductAmount = cartProducts[id]
   return (
     <div className="product">
