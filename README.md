@@ -12,7 +12,6 @@ Welcome to Oppulent Oddities, your online destination for exploring a world of v
 - [Usage](#usage)
 - [License](#license)
 - [Contributors](#contributors)
-- [Tests](#tests)
 - [Questions](#questions)
 
 ## Installation
@@ -42,10 +41,6 @@ MIT
 ## Contributors
 
 This code was written and debugged by Elenilson Hernandez, Cecil John, Alexius Savage and Robert Gomez
-
-## Tests
-
-The user should input node index to test code.
 
 ## Questions
 

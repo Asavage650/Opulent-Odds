@@ -1,8 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
 
-/* * {
-  box-sizing: border-box;
-} */
+
 
 body {
   margin: 0;
@@ -16,14 +14,12 @@ body {
   justify-content: space-between;
   align-items: center;
   font-size: 30px;
-  /* gap: 2rem; */
 
 }
 
 .link-title {
   font-family: 'Pacifico', cursive;
   color: rgba(152, 67, 237, 0.39);
-  /* color: #111; */
 
 
 }
